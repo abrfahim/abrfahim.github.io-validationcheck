@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>User Validation</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="my-3">
+            <h2> <b>Fill up this form</b></h2>
+        </div>
+        <hr>
+        <form>
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="FirstName & LastName" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="inputContact" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="inputContact" placeholder="At least 11 digit ex: 019xxxxxxxx" onkeyup="validateContact()">
+                <span id="contact-error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="inputPostalCode" class="form-label">Postal Code</label>
+                <input type="text" class="form-control" id="inputPostalCode" placeholder="4 Digit ex:1234" onkeyup="validatePostal()">
+                <span id="postal-error"></span>
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="ex: xyz123@gmail.com" onkeyup="validateEmail()">
+              <span id="email-error"></span>
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" onkeyup="validatePass()" placeholder="At least contain one Capital letter, small letter, special chracter & number">
+              <span id="pass-error"></span>
+            </div>
+            <button id="fsubmit" type="submit" class="btn btn-info" onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+            <hr>
+          </form>
+    </div>
+
+    
+    
+    <script src="static/main.js"></script>
+  </body>
+</html>
